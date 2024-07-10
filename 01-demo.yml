@@ -2,3 +2,10 @@
   tasks:
     - name: Ping all hosts
       ping:
+
+    - name: Sample Playbook
+      hosts: all
+      tasks:
+        - name: print hello world
+          ansible.builtin.debug:
+            msg: Hello World
