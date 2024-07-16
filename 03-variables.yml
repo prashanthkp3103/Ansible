@@ -1,0 +1,8 @@
+- name: Demo on variables
+  hosts: all
+  vars:
+    URL: google.com
+  tasks:
+    - name: PRINT URL
+      ansible.builtin.debug:
+        msg: "URL = {{ URL }}" #same like shell u care accessing variable with prefix $, here varaible will be under {{ }}
