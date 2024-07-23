@@ -7,5 +7,5 @@
 
 - name: print hello world
   ansible.builtin.debug:
-    msg: "URL2 from role = {{ URL2 }}, URL3 from defaults = {{ URL3 }}"
+    msg: "URL2 from role = {{ URL2 }}, URL3 from defaults = {{ URL3 }}, URL = {{ URL }}"
 
