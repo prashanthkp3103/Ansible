@@ -1,8 +1,20 @@
+#- name: Demo on variables
+#  hosts: all
+#  vars:
+#    URL: google.com
+#  tasks:
+#    - name: PRINT URL
+#      ansible.builtin.debug:
+#        msg: "URL = {{ URL }}" #same like shell u care accessing variable with prefix $, here varaible will be under {{ }}
+
+
 - name: Demo on variables
-  hosts: all
+  hosts: localhost
   vars:
     URL: google.com
+  var_files:
+    - 06-variables.yml
   tasks:
     - name: PRINT URL
       ansible.builtin.debug:
-        msg: "URL = {{ URL }}" #same like shell u care accessing variable with prefix $, here varaible will be under {{ }}
+        msg: "URL = {{ URL }}", "URL1 = {{ URL }}"
