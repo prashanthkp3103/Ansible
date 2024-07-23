@@ -17,4 +17,4 @@
   tasks:
     - name: PRINT URL
       ansible.builtin.debug:
-        msg: "URL = {{ URL }}, URL1 = {{ URL }}"
+        msg: "URL = {{ URL }}, URL1 = {{ URL1 }}"
