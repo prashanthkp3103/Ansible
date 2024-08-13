@@ -1,0 +1,5 @@
+- name: retrive Hashicorp secrets
+  hosts: localhost
+  tasks:
+    - debug:
+        msg: "{{ lookup('hashi_vault', 'secret=test/MYPASS token={{ var.vault_token }} url=https://vault.meppk.xyz:8200 validate_certs=False')}}"
